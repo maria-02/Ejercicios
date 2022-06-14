@@ -1,0 +1,34 @@
+#macbook-video {
+	background: url("../img/macbook.png") no-repeat;
+	background-size: cover;
+	width: auto;
+	height: auto;
+	z-index: -20;
+	min-width: 100%;
+	min-height: 100%;
+	position: fixed;
+}
+
+#login-page {
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#login-container {
+	margin-top: 100px;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: beige;
+	padding: 2rem;
+	border-radius: 10px;
+	border: 1.5px solid white;
+}
+
+#login-container button {
+	margin-top: 1rem;
+}
