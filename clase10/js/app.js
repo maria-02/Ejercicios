@@ -4,6 +4,7 @@ $(function () {
 			/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return re.test(email);
 	}
+	//console.log(mailValido("anystring@anystring.anystring"));
 
 	function isValidPassword(password) {
 		return password.length >= 8 && /.*[0-9].*/.test(password);
@@ -13,17 +14,16 @@ $(function () {
 		if (mailValido(message)) {
 			$("#mail").text("");
 		} else {
-			$("#mail").text("Please enter a valid mail.");
+			$("#mail").text("Por favor ingresa un mail válido.");
 			event.preventDefault();
 		}
 	}
-	console.log(mailValido("anystring@anystring.anystring"));
 	function formularioPassValida(password, event) {
 		if (isValidPassword(password)) {
 			$("#password").text("");
 		} else {
 			$("#password").text(
-				"The password should have at least 8 characters and contain a number"
+				"La contraseña debe contener 8 caracteres y al menos un número."
 			);
 			event.preventDefault();
 		}
