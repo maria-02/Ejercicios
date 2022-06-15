@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Clase 12</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div id="listaMarcas" class="col-6">
+                <h1>Lista de marcas</h1>
+                <ul class="lista">
+
+                </ul>
+            </div>
+            <div id="menuEd" class="col-4">
+                <h1>Menú de edición</h1>
+
+                <button type="button" id="mostrar" class="btn btn-primary">Mostrar marcas</button>
+                <hr>
+                <button type="button" id="eliminar" class="btn btn-danger">Eliminar última marca</button>
+                <hr>
+                <div class="input-group mb-3">
+
+                    <input type="text" id="agregarMarca" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Escribir una marca...">
+                </div>
+                <button type="button" id="agregar" class="btn btn-success">Agregar marca</button>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-danger col-4" role="alert" style="display: none;">No hay más marcas para mostrar
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
