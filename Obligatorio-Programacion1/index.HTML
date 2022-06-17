@@ -1,0 +1,155 @@
+<!-- Maria Noel Chiquiar 178609, Antonio Fontes 245213 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src='js/clases.js'></script>
+	<script src='js/funciones.js'></script>
+
+	<title>Obligatorio 1</title>
+</head>
+
+<body>
+	<!-- Header de página -->
+	<header>
+		<h1>Gesti&oacute;n de Series</h1>
+	</header>
+
+	<!-- Links de navegación -->
+	<nav>
+		<p id="idLink1">Series</p>
+		<p id="idLink2">Opiniones</p>
+		<p id="idLink3">Estad&iacute;sticas</p>
+	</nav>
+
+	<!-- Parte de arriba / Primera parte-->
+	<section id='idSec1'>
+		<div>
+			<h3>Manejo de series</h3>
+			<!-- Formulario, ingreso de datos -->
+			<form id="formNombre" action="#" method="post">
+				<label for="registroNombre">Nombre:</label>
+				<br><input type="text" maxlength="20" id="registroNombre" placeholder="Nombre" required />
+				<br><label for="descripcion">Descripci&oacute;n:</label>
+				<br><input type="text" maxlength="50" id="descripcion" placeholder="Descripci&oacute;n" required>
+				<br><label for="cantTemp">Cantidad de temporadas:</label>
+				<br><input type="number" min="1" max="20" id="cantTemp" required>
+				<br><label for="capxTemp">Cap&iacute;tulos por temporada:</label>
+				<br><input type="number" min="1" max="30" id="capxTemp" required>
+				<!-- Botones: -->
+				<br><br><input type="button" id="botonAgregar1" value="Agregar/Actualizar">
+				<input type="reset" id="botonReset1" value="Reset">
+				<input type="button" id="botonPrevio" value="Previo">
+				<input type="button" id="botonSiguiente" value="Siguiente">
+			</form>
+
+			<a id="imdb" href='https://www.imdb.com/' target='_blank'> <img src='img/imdb.png' alt='IMDb logo'
+					style='width:90px; height: 60px;'> </a>
+
+		</div>
+	</section>
+
+	<!-- Segunda parte de página -->
+	<section id='idSec2'>
+		<div>
+			<h3>Datos sobre opiniones de visualizaciones</h3>
+			<!-- Formulario, ingreso de datos -->
+			<form id="formSeries" action="#" method="post">
+				<br><label for="series">Serie</label>
+				<br><select id='selSeries' name='series'>
+					<option value='' selected='selected'>Selecciona una serie</option>
+				</select>
+				<br><label for="numTemporada">Temporada:</label>
+				<br><input type="number" min="1" id="numTemporada" required>
+				<br><label for="numCap">Cap&iacute;tulo</label>
+				<br><input type="number" min="1" id="numCap" required>
+				<br><label for='puntaje'>Puntaje (1-10)</label>
+				<br><input type='range' id='puntaje' name='puntaje' min='1' max='10' required>
+				<br><label for='coment'>Comentarios</label>
+				<br><textarea id='coment' cols='50' rows='5' required></textarea>
+				<br><br><input type="button" id="botonAgregar2" value="Agregar/Actualizar">
+				<input type="reset" id="botonReset2" value="Reset">
+			</form>
+			<!-- Despliegue de datos obtenidos-->
+			<br>
+			<h3>Opiniones ingresadas de la serie</h3>
+			<br>
+			<ul id='opIngr'>
+				<li>Temp: 1 Cap: 4 Puntaje: 10 ¡El mejor cap&iacute;tulo, casi conquistan el mundo!</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Tercera parte de página -->
+	<section id='idSec3'>
+		<div>
+			<h3>Informaci&oacute;n estad&iacute;stica</h3>
+			<br>
+			<p>Series sin opiniones</p>
+			<!-- Listas -->
+			<br>
+			<ul id='idLista'>
+				<li>Friends - Comedia de amigos (Temporadas: 12, Cap&iacute;tulos: 8)</li>
+				<li>Superman - El hombre de acero (Temporadas: 14, Cap&iacute;tulos: 15)</li>
+			</ul>
+			<br>
+			<p>Top-3 Series con la m&aacute;xima cantidad de opiniones</p>
+			<br>
+			<ul id='listaTop'>
+				<li>Pinky y Cerebro - Dibujo de dos ratones (Temporadas: 15, cap&iacute;tulos:8)</li>
+			</ul>
+			<!-- Despliegue de info mediante tabla y pregunta con botones -->
+			<br>
+			<p>Informaci&oacute;n general</p>
+			<br>
+			<p>Orden:</p>
+			<form id="formOpiniones" action="#" method="post">
+				<input type="radio" id="nombSerie" name="orden" value="1" checked>
+				<label for='numeroRadio'>Nombre de serie</label>
+				<input type="radio" id="opDec" name="orden" value="2">
+				<label for='nombreRadio'>Cantidad de opiniones decreciente</label>
+			</form>
+			<!-- CENTRAR -->
+			<br>
+			<table id='idTabla'>
+				<caption>Informaci&oacute;n detallada</caption>
+				<thead>
+					<tr>
+						<th>Series</th>
+						<th>Cantidad de opiniones</th>
+						<th>Promedio general</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Friends</td>
+						<td>0</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Pinky y Cerebro</td>
+						<td>1</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>Superman</td>
+						<td>0</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<!-- Pie de página -->
+	<footer id="idPie">
+		<p>C&aacute;tedra de programaci&oacute;n - Programaci&oacute;n 1 - 2do semestre 2020 (Mar&iacute;a Noel Chiquiar
+			178609 - Antonio Fontes 245213)</p>
+	</footer>
+
+</body>
+
+</html>
